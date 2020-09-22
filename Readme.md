@@ -94,7 +94,7 @@ public class SwaggerConfig {
 
 5.[测试运行](http://localhost:8080/swagger-ui.html)
 
-![image-20200922223923667](C:\Users\15867\AppData\Roaming\Typora\typora-user-images\image-20200922223923667.png)
+![image-20200922223923667](/images/image-20200922223923667.png)
 
 ## 配置Swagger
 
