@@ -3,9 +3,7 @@ package com.example.test.entity;
 import java.time.LocalDateTime;
 import java.io.Serializable;
 
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableLogic;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.*;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -21,11 +19,10 @@ import lombok.experimental.Accessors;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-//@Accessors(chain = true)
 @TableName("user")
 public class User implements Serializable {
 
-    @TableField("id")
+    @TableId(type = IdType.AUTO)
     private Integer id;
     /**
      * 姓名

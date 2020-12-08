@@ -4,9 +4,9 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/how2java?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&&useSSL=false&allowPublicKeyRetrieval=true
+    url: jdbc:mysql://8.131.254.123:3306/how2java?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&&useSSL=false&allowPublicKeyRetrieval=true
     username: root
-    password: w1586743407
+    password: w1586743407!
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: GMT+8
@@ -17,9 +17,8 @@ mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #开启sql日志
   mapper-locations: classpath:/mybatis-mappers/*Mapper.xml
-  typeAliasesPackage: com.example.test
+  typeAliasesPackage: com.example.test.entity
   global-config:
     db-config:
-      logic-delete-field: false  # 逻辑删除字段值
       logic-delete-value: 1 # 逻辑已删除值
       logic-not-delete-value: 0 # 逻辑未删除值

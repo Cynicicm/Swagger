@@ -5,6 +5,7 @@ import com.example.test.mapper.UserMapper;
 import com.example.test.service.IUserService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -49,5 +50,30 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
         }catch (Exception e){
             return "failed";
         }
+    }
+
+    @Override
+    public int create(User user) {
+        int result = userMapper.insert(user);
+        return result;
+    }
+
+    @Override
+    public User retrieve(Integer id) {
+        return userMapper.selectById(id);
+    }
+
+    @Override
+    public int update(User user) {
+        User entity = userMapper.selectById(user.getId());
+        BeanUtils.copyProperties(user,entity);
+        int result = userMapper.updateById(entity);
+        return result;
+    }
+
+    @Override
+    public int delete(Integer id) {
+        int result = userMapper.deleteById(id);
+        return result;
     }
 }

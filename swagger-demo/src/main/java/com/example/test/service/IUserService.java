@@ -16,4 +16,9 @@ import java.util.Map;
 public interface IUserService extends IService<User> {
     String getName(String id);
     String logicDelete(String id);
+
+    int create(User user);
+    User retrieve(Integer id);
+    int update(User user);
+    int delete(Integer id);
 }
