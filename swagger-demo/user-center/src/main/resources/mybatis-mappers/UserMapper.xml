@@ -3,7 +3,7 @@
 <mapper namespace="com.tempName.mapper.UserMapper">
 
     <select id="selectByUsername"
-            resultType="com.tempName.entity.User">
+            resultType="com.tempName.common.entity.User">
         select * from user where username = #{username}
     </select>
 

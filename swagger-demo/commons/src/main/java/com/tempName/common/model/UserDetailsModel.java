@@ -1,6 +1,6 @@
-package com.tempName.model;
+package com.tempName.common.model;
 
-import com.tempName.entity.User;
+import com.tempName.common.entity.User;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 

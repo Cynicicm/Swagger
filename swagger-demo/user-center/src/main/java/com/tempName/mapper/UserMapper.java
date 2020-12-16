@@ -1,8 +1,8 @@
 package com.tempName.mapper;
 
-import com.tempName.entity.User;
+import com.tempName.common.entity.User;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import org.mapstruct.Mapper;
+import org.apache.ibatis.annotations.Mapper;
 
 /**
  * <p>

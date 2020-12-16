@@ -8,10 +8,10 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 @SpringBootApplication
 @MapperScan("com.tempName.mapper")
-public class TestDemoApplication {
+public class UserCenterApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(TestDemoApplication.class, args);
+        SpringApplication.run(UserCenterApplication.class, args);
     }
 
 }

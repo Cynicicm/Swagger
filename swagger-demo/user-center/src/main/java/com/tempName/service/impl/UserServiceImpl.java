@@ -1,6 +1,6 @@
 package com.tempName.service.impl;
 
-import com.tempName.entity.User;
+import com.tempName.common.entity.User;
 import com.tempName.mapper.UserMapper;
 import com.tempName.common.request.UserLoginParam;
 import com.tempName.service.IUserService;
@@ -44,33 +44,6 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
     private UserMapper userMapper;
     @Autowired
     private PasswordEncoder passwordEncoder;
-
-    @Override
-    public int create(User user) {
-        return userMapper.insert(user);
-    }
-
-    @Override
-    public User retrieve(Integer id) {
-        return userMapper.selectById(id);
-    }
-
-    @Override
-    public int update(User user) {
-        User entity = userMapper.selectById(user.getId());
-        BeanUtils.copyProperties(user,entity);
-        return userMapper.updateById(entity);
-    }
-
-    @Override
-    public int delete(Integer id) {
-        return userMapper.deleteById(id);
-    }
-
-    @Override
-    public List<User> listAll() {
-        return userMapper.selectList(null);
-    }
 
     @Override
     public User selectByUserName(String username) {

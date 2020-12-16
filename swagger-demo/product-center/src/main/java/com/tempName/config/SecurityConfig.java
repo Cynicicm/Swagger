@@ -1,9 +1,9 @@
 package com.tempName.config;
 
-import com.tempName.component.JwtAuthenticationTokenFilter;
 import com.tempName.common.entity.User;
-import com.tempName.service.IUserService;
 import com.tempName.common.model.UserDetailsModel;
+import com.tempName.component.JwtAuthenticationTokenFilter;
+import com.tempName.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -52,16 +52,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                         "/v2/api-docs/**"
                 )
                 .permitAll()
-                .antMatchers("/login", "/register")
+                .antMatchers(HttpMethod.GET,"/product/**")
                 .permitAll()
-//                .antMatchers("/user/**") // 允许自定义接口的任意http请求访问
-//                .permitAll()
-//                .antMatchers(HttpMethod.GET,  // 允许自定义接口的get请求匿名访问
-//                        "/user/**")
-//                .permitAll()
-//                .antMatchers(HttpMethod.DELETE,
-//                        "/user/**") // 允许自动以接口的delete请求匿名访问
-//                .permitAll()
                 .anyRequest()// 除上面外的所有请求全部需要鉴权认证
                 .authenticated();
 
