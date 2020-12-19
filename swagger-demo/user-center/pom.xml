@@ -10,11 +10,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>user-center</artifactId>
+    
     <dependencies>
         <dependency>
             <groupId>com.tempName</groupId>
             <artifactId>commons</artifactId>
             <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 
