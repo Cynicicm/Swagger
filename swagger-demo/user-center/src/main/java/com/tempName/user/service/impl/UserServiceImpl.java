@@ -38,6 +38,7 @@ import java.util.Date;
 @Slf4j
 public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IUserService {
 
+
     private static final Logger LOGGER = LoggerFactory.getLogger(UserServiceImpl.class);
     @Autowired
     private JwtTokenUtil jwtTokenUtil;
@@ -53,6 +54,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
     @Override
     public String login(UserLoginParam loginParam) {
         String token = null;
+        User user = new User();
         try {
             UserDetails userDetails = userDetailsService.loadUserByUsername(loginParam.getUsername());
             if (!passwordEncoder.matches(loginParam.getPassword(), userDetails.getPassword())) {
