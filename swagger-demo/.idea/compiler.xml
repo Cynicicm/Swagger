@@ -7,13 +7,15 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="commons" />
+        <module name="Ioc-center" />
         <module name="user-center" />
         <module name="product-center" />
+        <module name="commons" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="commons" target="1.8" />
+      <module name="Ioc-center" target="8" />
       <module name="product-center" target="1.8" />
       <module name="swagger-demo" target="1.8" />
       <module name="user-center" target="1.8" />
@@ -21,6 +23,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Ioc-center" options="-parameters" />
       <module name="commons" options="-parameters" />
       <module name="product-center" options="-parameters" />
       <module name="user-center" options="-parameters" />
