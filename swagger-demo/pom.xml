@@ -8,6 +8,7 @@
         <module>commons</module>
         <module>product-center</module>
         <module>Ioc-center</module>
+        <module>aop-center</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
