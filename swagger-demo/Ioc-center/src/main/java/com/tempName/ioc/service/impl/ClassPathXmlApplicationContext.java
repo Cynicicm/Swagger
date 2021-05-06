@@ -1,9 +1,9 @@
-package com.tempName.service.impl;
+package com.tempName.ioc.service.impl;
 
-import com.tempName.config.ConfigManager;
-import com.tempName.entity.Bean;
-import com.tempName.entity.Property;
-import com.tempName.service.BeanFactory;
+import com.tempName.ioc.config.ConfigManager;
+import com.tempName.ioc.entity.Bean;
+import com.tempName.ioc.entity.Property;
+import com.tempName.ioc.service.BeanFactory;
 import org.apache.commons.beanutils.BeanUtils;
 
 import java.util.HashMap;

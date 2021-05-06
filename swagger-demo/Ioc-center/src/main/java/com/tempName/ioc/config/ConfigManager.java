@@ -1,7 +1,7 @@
-package com.tempName.config;
+package com.tempName.ioc.config;
 
-import com.tempName.entity.Bean;
-import com.tempName.entity.Property;
+import com.tempName.ioc.entity.Bean;
+import com.tempName.ioc.entity.Property;
 import org.dom4j.Document;
 import org.dom4j.Element;
 import org.dom4j.io.SAXReader;

@@ -1,4 +1,4 @@
-package com.tempName.entity;
+package com.tempName.ioc.entity;
 
 import lombok.Data;
 

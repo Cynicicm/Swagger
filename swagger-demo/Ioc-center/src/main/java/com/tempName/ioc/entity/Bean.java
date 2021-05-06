@@ -1,4 +1,4 @@
-package com.tempName.entity;
+package com.tempName.ioc.entity;
 
 import lombok.Data;
 
@@ -18,3 +18,4 @@ public class Bean {
     private String scope = "singleton";
     private List<Property> properties = new ArrayList<>();
 }
+

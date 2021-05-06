@@ -1,4 +1,4 @@
-package com.tempName.entity;
+package com.tempName.ioc.entity;
 
 import lombok.Data;
 
@@ -9,6 +9,6 @@ import lombok.Data;
  */
 
 @Data
-public class Student {
-    private String name;
+public class Teacher {
+    private Student student;
 }
