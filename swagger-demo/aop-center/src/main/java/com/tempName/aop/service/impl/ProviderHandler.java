@@ -1,6 +1,4 @@
-package com.tempName.service.impl;
-
-import com.tempName.service.IProvider;
+package com.tempName.aop.service.impl;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
@@ -12,7 +10,8 @@ import java.lang.reflect.Proxy;
  * @date: 2021/4/29
  */
 
-public class ProviderHandler implements InvocationHandler {
+public class
+ProviderHandler implements InvocationHandler {
     Object target;
 
     public Object bind(Object target){

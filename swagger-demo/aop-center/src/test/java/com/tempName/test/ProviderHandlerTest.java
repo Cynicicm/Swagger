@@ -1,8 +1,8 @@
 package com.tempName.test;
 
-import com.tempName.service.IProvider;
-import com.tempName.service.impl.ProviderHandler;
-import com.tempName.service.impl.SimpleProvider;
+import com.tempName.aop.service.IProvider;
+import com.tempName.aop.service.impl.ProviderHandler;
+import com.tempName.aop.service.impl.SimpleProvider;
 import org.junit.Test;
 
 /**
