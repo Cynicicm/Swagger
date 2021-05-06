@@ -24,11 +24,9 @@ public class ProviderHandler implements InvocationHandler {
 
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-        //限流
         System.out.println("ProviderHandler Method : Before");
         Object obj = method.invoke(target, args);
         System.out.println("ProviderHandler Method : After");
-        //打印日志
         return obj;
     }
 }
