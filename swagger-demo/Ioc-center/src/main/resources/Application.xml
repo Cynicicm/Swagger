@@ -3,15 +3,15 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean name="student" class="com.tempName.entity.Student">
+    <bean name="student" class="com.tempName.ioc.entity.Student">
         <property name="name" value="123"/>
     </bean>
 
-    <bean name="teacher" class="com.tempName.entity.Teacher">
+    <bean name="teacher" class="com.tempName.ioc.entity.Teacher">
         <property name="student" ref="student"/>
     </bean>
 
-    <bean name="person" class="com.tempName.entity.Person">
+    <bean name="person" class="com.tempName.ioc.entity.Person">
         <property name="teacher" ref="teacher"/>
         <property name="student" ref="student"/>
     </bean>

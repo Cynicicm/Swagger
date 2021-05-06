@@ -1,9 +1,9 @@
-package com.tempName;
+package com.tempName.test;
 
-import com.tempName.entity.Person;
-import com.tempName.entity.Student;
-import com.tempName.service.BeanFactory;
-import com.tempName.service.impl.ClassPathXmlApplicationContext;
+import com.tempName.ioc.entity.Person;
+import com.tempName.ioc.entity.Student;
+import com.tempName.ioc.service.BeanFactory;
+import com.tempName.ioc.service.impl.ClassPathXmlApplicationContext;
 import org.junit.Test;
 
 /**
