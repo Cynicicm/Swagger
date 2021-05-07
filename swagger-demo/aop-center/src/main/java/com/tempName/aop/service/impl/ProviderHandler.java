@@ -10,13 +10,12 @@ import java.lang.reflect.Proxy;
  * @date: 2021/4/29
  */
 
-public class
-ProviderHandler implements InvocationHandler {
+public class ProviderHandler implements InvocationHandler {
     Object target;
 
     public Object bind(Object target){
         this.target = target;
-        //这里生成了代理对象
+        // 这里生成了代理对象
         return Proxy.newProxyInstance(target.getClass().getClassLoader(),
                 target.getClass().getInterfaces(), this);
     }
