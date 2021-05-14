@@ -17,11 +17,11 @@ import java.util.Map;
 
 public class ClassPathXmlApplicationContext implements BeanFactory {
 
-    // 获得读取的配置文件中的 Map 信息
+    /**
+     * 获得读取的配置文件中的 Map 信息
+     */
     private Map<String, Bean> map;
-    // 作为 IoC 容器使用，放置 String 放置的对象
     private Map<String, Object> context = new HashMap<>();
-
     public ClassPathXmlApplicationContext(String path) {
         // 1.读取配置文件得到需要初始化的 Bean 信息
         Map<String, Bean> map = ConfigManager.getConfig(path);
@@ -34,7 +34,7 @@ public class ClassPathXmlApplicationContext implements BeanFactory {
             Object existBean = context.get(beanName);
             // 单例模式
             // 当容器中为空，并且 bean 的 scope 属性为 singleton 时
-            if (existBean == null && bean.getScope().equals("singleton")) {
+            if (existBean == null && "singleton".equals(bean.getScope())) {
                 // 根据字符串创建 Bean 对象
                 Object beanObj = createBean(bean);
 
@@ -44,7 +44,6 @@ public class ClassPathXmlApplicationContext implements BeanFactory {
         }
     }
 
-    // 通过反射创建对象
     private Object createBean(Bean bean) {
         // 创建该类对象
         Class clazz = null;
@@ -94,8 +93,8 @@ public class ClassPathXmlApplicationContext implements BeanFactory {
                         existBean = createBean(map.get(prop.getRef()));
                         // 放置到 context 容器中
                         // 只有当 scope = "singleton" 时才往容器中放
-                        if (map.get(prop.getRef()).getScope()
-                                .equals("singleton")) {
+                        if ("singleton"
+                                .equals(map.get(prop.getRef()).getScope())) {
                             context.put(prop.getRef(), existBean);
                         }
                     }
