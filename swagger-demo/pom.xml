@@ -9,6 +9,7 @@
         <module>product-center</module>
         <module>Ioc-center</module>
         <module>aop-center</module>
+        <module>builderModel</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
